@@ -1,0 +1,533 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\hypertarget{assignment1}{%
+\section{Assignment1}\label{assignment1}}
+
+\hypertarget{section}{%
+\subsection{1}\label{section}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  One-way Propagation Delay: The propagation delay \(d\) is calculated
+  by the formula: \[
+  d = \frac{Distance}{Speed~of~Light}
+  \]
+\item
+  Transmission Time: The time \(t\) it takes to transmit the data at a
+  given rate is given by: \[
+  t = \frac{Size~of~Data}{Transmission~Rate}
+  \]
+\item
+  Total Time for data to be received on Earth: \[
+  Total~Time = Propagation~Delay + Transmission~Time
+  \]
+\end{enumerate}
+
+\hypertarget{a-one-way-propagation-delay}{%
+\subsubsection{(a) One-way Propagation
+Delay}\label{a-one-way-propagation-delay}}
+
+\begin{itemize}
+\tightlist
+\item
+  Distance between Earth and Mars at closest approach =
+  \(62.07 \times 10^{9}\)meters (62.07 Gm)
+\item
+  Speed of light = \(3 \times 10^{8}\)meters/second \[
+  Propagation~Delay = \frac{62.07 \times 10^{9}}{3 \times 10^{8}} 
+  \] \[
+  Propagation~Delay \approx 206.9~seconds
+  \]
+\end{itemize}
+
+\hypertarget{b-time-of-picture-receipt-on-earth}{%
+\subsubsection{(b) Time of Picture Receipt on
+Earth}\label{b-time-of-picture-receipt-on-earth}}
+
+\begin{itemize}
+\tightlist
+\item
+  Image size = 4Mb = \(4 \times 10^{6}\)bits
+\item
+  Transmission rate = 256kbps = \(256 \times 10^{3}\)bits/second \[
+  Transmission~Time = \frac{4 \times 10^{6}}{256 \times 10^{3}} 
+  \] \[
+  Transmission~Time = 15.625~seconds
+  \]
+\end{itemize}
+
+Total Time for the picture to be received on Earth would be the sum of
+the propagation delay and the transmission time:
+
+\[
+Total~Time = 206.9 + 15.625
+\] \[
+Total~Time = 222.525~seconds
+\]
+
+So, at the time of closest approach, the image from the rover would be
+received on Earth in approximately 222.525 seconds after being sent.
+
+\hypertarget{section-1}{%
+\subsection{2}\label{section-1}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Queuing Delay: Queuing delay is the time a packet waits in the queue
+  before it can be transmitted.
+\item
+  Transmission Time: \(t\) is given
+  by:\[t = \frac{{\text{Size of Data}}}{{\text{Transmission Rate}}}\]
+\item
+  Maximum Queuing Delay: This is the delay experienced by the last
+  packet in the queue.
+\item
+  Minimum Queuing Delay: This is the delay experienced by the first
+  packet in the queue. If the outgoing link is free, this is typically
+  zero.
+\item
+  Average Queuing Delay: This is the average of the queuing delays
+  experienced by all the packets.
+\end{enumerate}
+
+\hypertarget{given}{%
+\subsubsection{Given}\label{given}}
+
+\begin{itemize}
+\tightlist
+\item
+  Size of each packet = 3200 bytes = \(3200 \times 8\)bits = \(25600\)
+  bits
+\item
+  Number of packets = 10
+\item
+  Transmission rate = 20 Mbps = \(20 \times 10^6\)bits/second
+\end{itemize}
+
+\hypertarget{a-maximum-queuing-delay}{%
+\subsubsection{(a) Maximum Queuing
+Delay}\label{a-maximum-queuing-delay}}
+
+To find the maximum queuing delay, we must find the time it takes to
+transmit all packets before the last one.
+
+Transmission time for one packet: \[
+t = \frac{{25600}}{{20 \times 10^6}} = \frac{{25600}}{{2 \times 10^7}} = \frac{{128}}{{10^6}} = 0.128 \text{ seconds} = 128 \text{ ms}
+\]
+
+Maximum Queuing Delay for the last packet: \[
+\text{Max Queuing Delay} = (10 - 1) \times 128 \text{ ms} = 9 \times 128 \text{ ms} = 1152 \text{ ms}
+\]
+
+\hypertarget{b-minimum-queuing-delay}{%
+\subsubsection{(b) Minimum Queuing
+Delay}\label{b-minimum-queuing-delay}}
+
+The minimum queuing delay would be for the first packet. If the outgoing
+link is free (which is given), the minimum queuing delay is zero. \[
+\text{Min Queuing Delay} = 0 \text{ ms}
+\]
+
+\hypertarget{c-average-queuing-delay}{%
+\subsubsection{\texorpdfstring{\(c\) Average Queuing
+Delay}{c Average Queuing Delay}}\label{c-average-queuing-delay}}
+
+The average queuing delay is the average of the delays experienced by
+all the packets. It's the sum of the queuing delays divided by the
+number of packets.
+
+\[
+\text{Average Queuing Delay} = \frac{{0 + 128 + 256 + \ldots + 1152}}{10}
+\] \[
+\text{Average Queuing Delay} = \frac{{(9 \times 10 / 2) \times 128}}{10} = \frac{{9 \times 128}}{2} = \frac{{1152}}{2} = 576 \text{ ms}
+\]
+
+\hypertarget{d-queue-limitations}{%
+\subsubsection{(d) Queue Limitations}\label{d-queue-limitations}}
+
+If the queue can only hold 6 packets, then the maximum queuing delay
+would be for the last packet in the limited queue.
+
+\[
+\text{Max Queuing Delay with Limited Queue} = (6 - 1) \times 128 \text{ ms} = 5 \times 128 \text{ ms} = 640 \text{ ms}
+\]
+
+For the other 4 packets that cannot be held in the queue, they would
+typically be dropped or sent to a different queue, depending on the
+router's packet dropping or buffering policy.
+
+\hypertarget{section-2}{%
+\subsection{3}\label{section-2}}
+
+\hypertarget{a-throughput-with-original-rates}{%
+\subsubsection{(a) Throughput with Original
+Rates}\label{a-throughput-with-original-rates}}
+
+The throughput will be determined by the link with the lowest rate (the
+bottleneck). The rates given are:
+
+\begin{itemize}
+\tightlist
+\item
+  \(R1 = 500\) kbps
+\item
+  \(R2 = 2\) Mbps
+\item
+  \(R3 = 1\) Mbps
+\end{itemize}
+
+The bottleneck is \(R1 = 500\) kbps. So the throughput for the file
+transfer is \(500\) kbps.
+
+\hypertarget{b-time-to-transfer-file-with-original-rates}{%
+\subsubsection{(b) Time to Transfer File with Original
+Rates}\label{b-time-to-transfer-file-with-original-rates}}
+
+The file size is \(4\) million bytes. First, let's convert this size
+into bits: \[
+\text{File Size} = 4 \times 10^6 \text{ bytes} \times 8 \text{ bits/byte} = 32 \times 10^6 \text{ bits} = 32 \text{ Mbits}
+\]
+
+The time \(t\) to transfer this file at \(500\) kbps is: \[
+t = \frac{{32 \text{ Mbits}}}{{500 \text{ kbps}}} = \frac{{32 \times 10^6 \text{ bits}}}{{500 \times 10^3 \text{ bits/sec}}} = \frac{{32 \times 10^6}}{{500 \times 10^3}} \text{ sec} = 64 \text{ sec}
+\]
+
+\hypertarget{c-throughput-with-reduced-r2}{%
+\subsubsection{\texorpdfstring{\(c\) Throughput with Reduced
+\(R2\)}{c Throughput with Reduced R2}}\label{c-throughput-with-reduced-r2}}
+
+Now \(R2\) is reduced to \(100\) kbps, which becomes the new bottleneck.
+So the throughput for the file transfer is now \(100\) kbps. The time
+\(t\) to transfer this file at \(100\) kbps is: \[
+t = \frac{{32 \text{ Mbits}}}{{100 \text{ kbps}}} = \frac{{32 \times 10^6 \text{ bits}}}{{100 \times 10^3 \text{ bits/sec}}} = \frac{{32 \times 10^6}}{{100 \times 10^3}} \text{ sec} = 320 \text{ sec}
+\]
+
+So with \(R2\) reduced to \(100\) kbps:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The throughput becomes \(100\) kbps.
+\item
+  The time to transfer the \(4\) million byte file becomes \(320\)
+  seconds.
+\end{enumerate}
+
+\hypertarget{section-3}{%
+\subsection{4}\label{section-3}}
+
+\hypertarget{given-1}{%
+\subsubsection{Given:}\label{given-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  Base HTML file size: 5 KBytes = \(5 \times 8 \times 1024\) bits =
+  \(40,960\) bits
+\item
+  Each referenced object: 200 KBytes = \(200 \times 8 \times 1024\) bits
+  =\(1,638,400\) bits
+\item
+  Each control message: 200 bits
+\item
+  Transmission rate: 10 Mbps = \(10 \times 10^6\) bits/sec
+\item
+  One-way propagation delay: 50 ms = \(0.05\) sec
+\item
+  Number of referenced objects: 8
+\end{itemize}
+
+\hypertarget{definitions-and-formulas}{%
+\subsubsection{Definitions and
+Formulas:}\label{definitions-and-formulas}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Round-trip time (RTT) = \(2 \times \text{Propagation delay}\)
+\item
+  Transmission time =
+  \(\frac{\text{File Size}}{\text{Transmission Rate}}\)
+\item
+  Total time for each method will depend on various factors such as
+  connection establishment, transmission times, and RTT.
+\end{enumerate}
+
+\hypertarget{common-calculations}{%
+\subsubsection{Common Calculations:}\label{common-calculations}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  RTT = \(2 \times 0.05\) sec = \(0.1\)sec
+\item
+  Transmission time for the base HTML file =
+  \(\frac{40,960}{10 \times 10^6}\)sec = \(0.004096\) sec
+\item
+  Transmission time for one referenced object =
+  \(\frac{1,638,400}{10 \times 10^6}\) sec = \(0.16384\) sec
+\end{enumerate}
+
+\hypertarget{a-using-basic-non-persistent-http-with-no-parallel-connections}{%
+\subsubsection{(a) Using basic non-persistent HTTP with no parallel
+connections}\label{a-using-basic-non-persistent-http-with-no-parallel-connections}}
+
+For each object (including the base HTML file), we need to establish a
+new connection, send a request, and then receive the object. This
+process involves:
+
+\begin{itemize}
+\tightlist
+\item
+  1 RTT for the TCP handshake
+\item
+  1 RTT for the HTTP request and response
+\end{itemize}
+
+For the base HTML file: \[
+1 \text{ RTT (handshake)} + 1 \text{ RTT (HTTP)} + 0.004096 \text{ sec (transmission)}
+= 0.1 + 0.1 + 0.004096 = 0.204096 \text{ sec}
+\]
+
+For each referenced object (8 in total): \[
+1 \text{ RTT (handshake)} + 1 \text{ RTT (HTTP)} + 0.16384 \text{ sec (transmission)}= 0.1 + 0.1 + 0.16384 = 0.36384 \text{ sec}
+\]
+
+Total time: \[
+0.204096 \text{ sec (base)} + 8 \times 0.36384 \text{ sec (each object)} = 0.204096 + 2.91072 = 3.114816 \text{ sec}
+\]
+
+\hypertarget{b-using-non-persistent-http-with-parallel-connections}{%
+\subsubsection{(b) Using non-persistent HTTP with parallel
+connections}\label{b-using-non-persistent-http-with-parallel-connections}}
+
+The bandwidth is shared, so each of the 8 connections will receive
+\(1/8\) of the 10 Mbps bandwidth, or \(1.25\) Mbps.
+
+New transmission time for one referenced object =
+\(\frac{1,638,400}{1.25 \times 10^6}\)sec = \(1.31072\) sec
+
+Total time:
+
+\[
+0.204096 \text{ sec (base)} + 0.1 \text{ sec (handshake for first object)} + 0.1 \text{ sec (HTTP request for first object)} + 1.31072 \text{ sec (transmission for one object)}= 0.204096 + 0.1 + 0.1 + 1.31072 = 1.714816 \text{ sec}
+\]
+
+\hypertarget{c-using-persistent-http-non-pipelined-no-parallel-connections}{%
+\subsubsection{\texorpdfstring{\(c\) Using persistent HTTP
+(non-pipelined, no parallel
+connections)}{c Using persistent HTTP (non-pipelined, no parallel connections)}}\label{c-using-persistent-http-non-pipelined-no-parallel-connections}}
+
+In persistent HTTP, one connection is established and kept open.
+
+Total time:
+
+\[
+0.204096 \text{ sec (base)} + 8 \times (1 \text{ RTT (HTTP) } + 0.16384 \text{ sec (transmission)})= 0.204096 + 8 \times (0.1 + 0.16384) = 0.204096 + 8 \times 0.26384 = 0.204096 + 2.11072 = 2.314816 \text{ sec}
+\]
+
+In summary:
+
+\begin{itemize}
+\tightlist
+\item
+  For basic non-persistent HTTP with no parallel connections, it will
+  take \(3.114816\) sec
+\item
+  For non-persistent HTTP with parallel connections, it will take
+  \(1.714816\) sec
+\item
+  For persistent HTTP (non-pipelined, no parallel connections), it will
+  take \(2.314816\) sec
+\end{itemize}
+
+\hypertarget{section-4}{%
+\subsection{5}\label{section-4}}
+
+When you enter a URL in your web browser and the IP address associated
+with that URL is not cached on your local host, a DNS (Domain Name
+System) lookup will be initiated to resolve the URL into an IP address.
+Assuming that no caching has occurred, the following DNS servers will
+typically be involved:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Local DNS Server (Recursive Resolver)}: Your browser will
+  first query the local DNS server. If it doesn't have the information,
+  it will start a series of queries to find the correct IP address. This
+  is usually the DNS server of your Internet Service Provider (ISP), or
+  it could be a public DNS server like Google's 8.8.8.8.
+\item
+  \textbf{Root DNS Server}: The local DNS server queries the root DNS
+  server if it doesn't have the IP address in its cache. The root server
+  returns a reference to a TLD (Top-Level Domain) DNS server.
+\item
+  \textbf{TLD DNS Server}: The local DNS server then queries the TLD DNS
+  server for the domain. For example, for \texttt{www.example.com}, this
+  would be the \texttt{.com} TLD DNS server. The TLD server returns a
+  reference to an Authoritative DNS server that has the actual IP
+  address.
+\item
+  \textbf{Authoritative DNS Server}: Finally, the local DNS server
+  queries the authoritative DNS server for the actual IP address of the
+  domain. Once it gets the IP address, it returns it to your browser.
+\end{enumerate}
+
+\hypertarget{minimum-number-of-dns-queries}{%
+\subsubsection{Minimum Number of DNS
+Queries}\label{minimum-number-of-dns-queries}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  One query to the local DNS server, which might involve:
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    One query to the Root DNS server.
+  \item
+    One query to the TLD DNS server.
+  \item
+    One query to the Authoritative DNS server for the domain.
+  \end{enumerate}
+\end{enumerate}
+
+So, the minimum number of DNS queries would be four if we consider the
+chain of queries that the local DNS server has to make on behalf of your
+initial query.
+
+\hypertarget{types-of-servers}{%
+\subsubsection{Types of Servers}\label{types-of-servers}}
+
+\begin{itemize}
+\tightlist
+\item
+  Local DNS Server (Recursive Resolver)
+\item
+  Root DNS Server
+\item
+  TLD (Top-Level Domain) DNS Server
+\item
+  Authoritative DNS Server
+\end{itemize}
+
+In summary, a minimum of four DNS queries will be issued, and they will
+be sent to these types of servers. Note that this is a simplified
+explanation and actual DNS resolution may involve more complex
+scenarios, but this should give you a good basic understanding.
+
+\hypertarget{section-5}{%
+\subsection{6}\label{section-5}}
+
+\hypertarget{a-http-version}{%
+\subsubsection{(a) HTTP Version}\label{a-http-version}}
+
+HTTP1.1
+
+\hypertarget{b-client-ip-address}{%
+\subsubsection{(b) Client ip address}\label{b-client-ip-address}}
+
+10.6.15.132
+
+\hypertarget{c-server-ip-address}{%
+\subsubsection{\texorpdfstring{\(c\) Server ip
+address}{c Server ip address}}\label{c-server-ip-address}}
+
+128.59.105.24
+
+\hypertarget{d-parallel-connections}{%
+\subsubsection{(d) Parallel Connections}\label{d-parallel-connections}}
+
+My browser do open multiple parallel connections, as many TCP handshakes
+happening around the same time.
+
+\hypertarget{e-total-number-of-connections}{%
+\subsubsection{(e) Total Number Of
+Connections}\label{e-total-number-of-connections}}
+
+\hypertarget{f-persistent-connections}{%
+\subsubsection{(f) Persistent
+Connections}\label{f-persistent-connections}}
+
+Persistent connections in HTTP/1.1 are indicated by the header
+\texttt{Connection:\ keep-alive}. Look for this in the \texttt{GET}
+request and the server's response. However, there're no such header, so
+not persistent connections.
+
+\end{document}
